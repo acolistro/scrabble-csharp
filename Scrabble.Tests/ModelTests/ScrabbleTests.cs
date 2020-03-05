@@ -48,9 +48,9 @@ namespace Letters.Tests
     [TestMethod]
     public void WordScore_ReturnTotalScoreForWord_Int()
     {
-      string word = "test";
+      char[] word = new char[] { 't', 'e', 's', 't' };
       int score = ScrabbleScore.WordScore(word);
-      Assert.AreEqual(10, score);
+      Assert.AreEqual(4, score);
     }
 
   }

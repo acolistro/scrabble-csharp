@@ -18,6 +18,17 @@ namespace Letters.Models
       return result;
     }
 
+    public static int WordScore(char[] word)
+    {
+      int score = 0;
+      foreach (var letter in word)
+      {
+        score += ReturnLetterScore(letter);
+      }
+
+      return score;
+    }
+
     public static int ReturnLetterScore(char letter)
     {
       int score = 0;
@@ -29,14 +40,6 @@ namespace Letters.Models
       string scoreFive = "K";
       string scoreEight = "JX";
       string scoreTen = "QZ";
-
-      // char[] score1 = new char[] { 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T' };
-      // char[] score2 = new char[] { 'D', 'G' };
-      // char[] score3 = new char[] { 'B', 'C', 'M', 'P' };
-      // char[] score4 = new char[] { 'F', 'H', 'V', 'W', 'Y' };
-      // char[] score5 = new char[] { 'K' };
-      // char[] score8 = new char[] { 'J', 'X' };
-      // char[] score10 = new char[] { 'Q', 'Z' };
 
 
       if (scoreOne.Contains(letterUpper))
@@ -75,11 +78,7 @@ namespace Letters.Models
       return score;
     }
 
-    public static int WordScore(string word)
-    {
-      int score = 0;
-      return score;
-    }
+
 
   }
 
